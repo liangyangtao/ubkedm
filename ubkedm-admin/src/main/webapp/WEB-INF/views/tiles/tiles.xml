@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+
+<!--  -->
+	<definition name="login-definition" template="/WEB-INF/views/tiles/layouts/loginLayout.jsp">
+		<put-attribute name="title" value="aa" type="string"/>
+		<put-attribute name="header" value="/WEB-INF/views/tiles/logintemplate/header.jsp" /> 
+		<put-attribute name="center" value="/WEB-INF/views/tiles/logintemplate/center.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/logintemplate/footer.jsp" />
+	</definition>
+    <definition name="login" extends="login-definition">
+		<put-attribute name="title" value="登陆" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/login.jsp" />
+	</definition>
+	<definition name="register" extends="login-definition">
+		<put-attribute name="title" value="注册" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/register.jsp" />
+	</definition>
+	<definition name="forgetpw" extends="login-definition">
+		<put-attribute name="title" value="忘记密码" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/forgetpw.jsp" />
+	</definition>
+
+
+<!--  -->
+	<definition name="admin-definition" template="/WEB-INF/views/tiles/layouts/adminLayout.jsp">
+		<put-attribute name="title" value="aa" />
+		<put-attribute name="alertbox" value="/WEB-INF/views/tiles/admintemplate/alertbox.jsp" />
+		<put-attribute name="center" value="/WEB-INF/views/tiles/admintemplate/center.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/admintemplate/footer.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/footerjs.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/admintemplate/header.jsp" />
+		<put-attribute name="leftmenu" value="/WEB-INF/views/tiles/admintemplate/leftmenu.jsp" />
+		<put-attribute name="settingbox" value="/WEB-INF/views/tiles/admintemplate/settingbox.jsp" />
+		<put-attribute name="top" value="/WEB-INF/views/tiles/admintemplate/top.jsp" />
+	</definition>
+	<definition name="home" extends="admin-definition">
+		<put-attribute name="title" value="首页" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/home.jsp" />
+	</definition>
+
+    <definition name="sender" extends="admin-definition">
+		<put-attribute name="title" value="发件人管理" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/sender.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/senderfooterjs.jsp" />
+	</definition>
+	<definition name="addSender" extends="admin-definition">
+		<put-attribute name="title" value="添加发件人" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/addSender.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/addSenderfooterjs.jsp" />
+	</definition>
+	
+	<definition name="reiver" extends="admin-definition">
+		<put-attribute name="title" value="收件人管理" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/reiver.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/reiverfooterjs.jsp" />
+	</definition>
+	<definition name="addReiver" extends="admin-definition">
+		<put-attribute name="title" value="添加收件人" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/addReiver.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/addReiverfooterjs.jsp" />
+	</definition>
+	<definition name="email" extends="admin-definition">
+		<put-attribute name="title" value="素材管理" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/email.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/emailfooterjs.jsp" />
+	</definition>
+	<definition name="addEmail" extends="admin-definition">
+		<put-attribute name="title" value="素材管理" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/addEmail.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/addEmailfooterjs.jsp" />
+	</definition>
+	<definition name="job" extends="admin-definition">
+		<put-attribute name="title" value="任务管理" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/job.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/jobfooterjs.jsp" />
+	</definition>
+	<definition name="addJob" extends="admin-definition">
+		<put-attribute name="title" value="添加任务" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/addJob.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/addJobfooterjs.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+
+		location="E:\maven_repository\mysql\mysql-connector-java\5.1.18\mysql-connector-java-5.1.18.jar" />
+	<context id="mysql_context" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.0.0.51:3306/ubk_email?autoReconnect=true&amp;characterEncoding=UTF-8"
+			userId="spider" password="spider" />
+		<javaModelGenerator targetPackage="com.unbank.mybatis.entity"
+			targetProject="ubkedm/src/main/java" />
+		<sqlMapGenerator targetPackage="com.unbank.mybatis.mapper"
+			targetProject="ubkedm/src/main/java" />
+		<javaClientGenerator targetPackage="com.unbank.mybatis.mapper"
+			targetProject="ubkedm/src/main/java" type="XMLMAPPER" />
+
+
+		<table schema="ubk_email" tableName="site" domainObjectName="Site">
+			<!-- <property name="useActualColumnNames" value="true" /> -->
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"
+				identity="true" type="post" />
+		</table>
+
+
+
+	</context>
+
+</generatorConfiguration>
